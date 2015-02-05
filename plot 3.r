@@ -17,7 +17,7 @@ df.project$date_time=as.POSIXct(paste(df.project$Date, df.project$Time), format=
 
 #Plot 3
 png("plot3.png",width=800, height=600)
-plot(df.project$date_time, df.project$Sub_metering_1, type="l", ylab="Energy sub metering")
+plot(df.project$date_time, df.project$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
   legend("topright",c(names(df.project[7:9])), col=c("black","red"), lwd=2)
   lines(df.project$date_time, df.project$Sub_metering_2, type="l", col="red")
   lines(df.project$date_time, df.project$Sub_metering_3, type="l", col="blue")  
